@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Ranu ❤️</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    min-height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3,#8e44ad);
+    color:white;
+}
+
+.page{
+    display:none;
+    min-height:100vh;
+    width:100%;
+    padding:25px;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+}
+
+.page.active{
+    display:flex;
+}
+
+.card{
+    width:min(92%,520px);
+    padding:35px 25px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.16);
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+    border:1px solid rgba(255,255,255,.25);
+    animation:cardIn .7s ease;
+}
+
+@keyframes cardIn{
+    from{
+        opacity:0;
+        transform:scale(.75) translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+h1{
+    font-size:clamp(30px,8vw,55px);
+    margin-bottom:18px;
+}
+
+h2{
+    font-size:clamp(22px,6vw,34px);
+    margin-bottom:25px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.heart{
+    font-size:65px;
+    animation:beat 1s infinite;
+    margin-bottom:15px;
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.2)}
+}
+
+button{
+    border:none;
+    padding:15px 28px;
+    margin:8px;
+    border-radius:50px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.yes{
+    background:#fff;
+    color:#e91e63;
+}
+
+.no{
+    background:#222;
+    color:white;
+    position:relative;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.floating-heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:25px;
+    animation:floatUp 5s linear forwards;
+    pointer-events:none;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+.small{
+    font-size:14px;
+    opacity:.8;
+}
+
+.big-love{
+    font-size:clamp(45px,12vw,90px);
+    font-weight:900;
+    text-shadow:0 8px 25px rgba(0,0,0,.25);
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.05)}
+}
+
+.gift-box{
+    font-size:80px;
+    animation:shake 1.5s infinite;
+}
+
+@keyframes shake{
+    0%,100%{transform:rotate(0)}
+    25%{transform:rotate(-8deg)}
+    75%{transform:rotate(8deg)}
+}
+
+.footer-love{
+    margin-top:25px;
+    font-size:clamp(30px,8vw,65px);
+    font-weight:900;
+    color:#fff;
+}
+
+.warning{
+    font-size:13px;
+    opacity:.75;
+    margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+    <div class="card">
+        <div class="heart">💖</div>
+
+        <h1>Hey Ranu! 🥺</h1>
+
+        <p>
+            Someone has prepared a very serious
+            investigation about you... 👀
+        </p>
+
+        <p>
+            But first, you have to enter. 😌
+        </p>
+
+        <button class="yes" onclick="nextPage(2)">
+            ENTER ❤️
+        </button>
+    </div>
+</section>
+
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+    <div class="card">
+
+        <div class="heart">🥰</div>
+
+        <h2>
+            Ranu, ek important question hai...
+        </h2>
+
+        <p>
+            Kya tum <b>Bikram</b> se pyaar karti ho? ❤️
+        </p>
+
+        <button class="yes" onclick="nextPage(3)">
+            YES ❤️
+        </button>
+
+        <button class="no moving">
+            NO 😏
+        </button>
+
+    </div>
+</section>
+
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+    <div class="card">
+
+        <div class="heart">😂❤️</div>
+
+        <h2>
+            Achaaa... 😌
+        </h2>
+
+        <p>
+            Tum toh phir itna pyaar karti ho...
+            <br><br>
+            <b>Toh gussa kyun ho?</b>
+        </p>
+
+        <p>
+            <b>Lalchi aurat! 😂</b>
+        </p>
+
+        <button class="yes" onclick="nextPage(4)">
+            Nahi mere Prabhu, main gussa nahi hoon 🥺❤️
+        </button>
+
+        <button class="no moving">
+            Haan, main gussa hoon 😤
+        </button>
+
+    </div>
+</section>
+
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+    <div class="card">
+
+        <div class="heart">😌❤️</div>
+
+        <h2>
+            Theek hai madam...
+        </h2>
+
+        <p>
+            Ab ek hi kaam karo...
+            <br><br>
+            <b>Mujhe I LOVE YOU bolo. ❤️</b>
+        </p>
+
+        <button class="yes" onclick="nextPage(5)">
+            I LOVE YOU ❤️
+        </button>
+
+        <button class="no moving">
+            Nahi bolunga 😏
+        </button>
+
+    </div>
+</section>
+
+
+<!-- PAGE 5 -->
+<section class="page" id="page5">
+    <div class="card">
+
+        <div class="gift-box">🎁</div>
+
+        <h2>
+            Wahhh! 😌❤️
+        </h2>
+
+        <p>
+            Agar tum mujhe itna pyaar karti ho...
+            <br><br>
+            Toh mere liye ek chhota sa gift kar do. 👀
+        </p>
+
+        <h1>📱 iPhone 18 😌</h1>
+
+        <button class="yes" onclick="nextPage(6)">
+            Haan Baby, abhi karta hoon 😘
+        </button>
+
+        <button class="no moving">
+            Nahi karunga 😂
+        </button>
+
+    </div>
+</section>
+
+
+<!-- PAGE 6 -->
+<section class="page" id="page6">
+    <div class="card">
+
+        <div class="heart">😂💸❤️</div>
+
+        <h2>
+            Ruko Ruko! 😂
+        </h2>
+
+        <p>
+            Itna serious hone ki zarurat nahi hai...
+        </p>
+
+        <p>
+            <b>Ye sirf ek prank tha! 😜</b>
+        </p>
+
+        <p>
+            ₹3,50,000 ka iPhone bill dekh ke
+            tum mujhe hi block kar dogi. 😂
+        </p>
+
+        <button class="yes" onclick="nextPage(7)">
+            Continue ❤️
+        </button>
+
+    </div>
+</section>
+
+
+<!-- FINAL PAGE -->
+<section class="page" id="page7">
+    <div class="card">
+
+        <div class="heart">❤️</div>
+
+        <p>
+            Gift-vift sab bakwaas tha...
+        </p>
+
+        <p>
+            Mujhe bas ek cheez chahiye...
+        </p>
+
+        <div class="big-love">
+            YOU ❤️
+        </div>
+
+        <p>
+            Gussa ho, pagal ho, lalchi ho...
+            <br>
+            par meri ho. 🥺❤️
+        </p>
+
+        <div class="footer-love">
+            I LOVE YOU RANU ❤️
+        </div>
+
+        <p class="warning">
+            — Yours, Bikram 🫶
+        </p>
+
+    </div>
+</section>
+
+
+<script>
+
+/* PAGE SWITCH */
+function nextPage(number){
+
+    document.querySelectorAll(".page").forEach(page=>{
+        page.classList.remove("active");
+    });
+
+    document.getElementById("page"+number).classList.add("active");
+
+    createHearts();
+}
+
+
+/* MOVING NO BUTTON */
+function makeNoButtonRun(button){
+
+    function moveButton(){
+
+        const maxX = window.innerWidth - button.offsetWidth - 20;
+        const maxY = window.innerHeight - button.offsetHeight - 20;
+
+        const x = Math.max(10, Math.random()*maxX);
+        const y = Math.max(10, Math.random()*maxY);
+
+        button.style.position = "fixed";
+        button.style.left = x + "px";
+        button.style.top = y + "px";
+        button.style.zIndex = "9999";
+
+    }
+
+    /* Desktop */
+    button.addEventListener("mouseenter", moveButton);
+
+    /* Mobile */
+    button.addEventListener("touchstart", function(e){
+        e.preventDefault();
+        moveButton();
+    });
+
+    /* If somehow clicked */
+    button.addEventListener("click", function(e){
+        e.preventDefault();
+        moveButton();
+    });
+}
+
+
+/* ACTIVATE ALL NO BUTTONS */
+document.querySelectorAll(".moving").forEach(button=>{
+    makeNoButtonRun(button);
+});
+
+
+/* FLOATING HEARTS */
+function createHearts(){
+
+    for(let i=0;i<12;i++){
+
+        const heart=document.createElement("div");
+
+        heart.className="floating-heart";
+
+        const emojis=[
+            "❤️","💖","💕","💗","💓","💘","🥰","😍","✨"
+        ];
+
+        heart.innerHTML=
+            emojis[Math.floor(Math.random()*emojis.length)];
+
+        heart.style.left=
+            Math.random()*100+"vw";
+
+        heart.style.animationDuration=
+            (3+Math.random()*4)+"s";
+
+        heart.style.fontSize=
+            (18+Math.random()*25)+"px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },7000);
+    }
+}
+
+
+/* INITIAL ANIMATION */
+setInterval(createHearts,3500);
+
+</script>
+
+</body>
+</html>
